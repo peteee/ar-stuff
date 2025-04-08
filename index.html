@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,26 +11,85 @@
             font-size: 20px;
             color: darkblue;
         }
+
+        img {
+            max-width: 300px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            padding: 5px;
+            gap: 30px;
+        }
+
+        main div {
+            background-color: rgba(255, 255, 255, 0.243);
+            border-radius: 30px;
+            padding: 20px;
+        }
+        main div video {
+            width: 100%;
+        }
+
+        .gradient-background {
+            background: linear-gradient(129deg, #fbfa88, #a19e80, #b6a535, #ec49e6, #1686c0);
+            background-size: 300% 300%;
+            animation: gradient-animation 25s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
     </style>
 </head>
-<body>
-    <h1>AR</h1>
 
-    <h2>Demo 1</h2>
-    <p><a href="demo1.htm">AR Demo 1 - IMAGE TRACKING - T-Rex</a> | <a href="./trex/trex-image-big.jpeg">MARKER</a></p>
+<body class="gradient-background">
+    <main>
+        <div>
+            <h1>AR</h1>
 
-    <h2>Demo 2</h2>
-    <p><a href="demo2.html">AR Demo 2 - GPS/location-based</a></p>
-    <p><a href="gps-ar-demo.html">GPS AR Demo 2 - GPS/location-based</a></p>
-    <p><a href="gps-ar-demo-2.html">GPS AR Demo 3 - GPS/location-based</a></p>
-    
-    <h2>Demo 3 - Custom Image Marker</h2>
-    <p><a href="marker-demo-1.html">Custom Marker</a></p>
-    <p><a href="marker-demo-2.html">Multiple Custom Markers YAY!!</a></p>
-    
-    <h3>Documentation</h3>
-    <p><a href="https://ar-js-org.github.io/AR.js/">AR.js</a></p>
-    <p><a href="https://carnaux.github.io/NFT-Marker-Creator/#/">Image Marker Generator</a></p>
-    
+            <h2>Demo 1</h2>
+            <p><a href="demo1.htm">AR Demo 1 - IMAGE TRACKING - T-Rex</a> | <a
+                    href="./trex/trex-image-big.jpeg">MARKER</a></p>
+
+            <h2>Demo 2</h2>
+            <p><a href="demo2.html">AR Demo 2 - GPS/location-based</a></p>
+            <p><a href="gps-ar-demo.html">GPS AR Demo 2 - GPS/location-based</a></p>
+            <p><a href="gps-ar-demo-2.html">GPS AR Demo 3 - GPS/location-based</a></p>
+
+            <h2>Demo 3 - Custom Image Marker</h2>
+            <p><a href="marker-demo-1.html">Custom Marker</a></p>
+            <p><a href="marker-demo-2.html">Multiple Custom Markers YAY!!</a></p>
+            <h3>Project 2 - Demo Code</h3>
+            <p><a href="project2.html">Project 2 - 3 Different Markers Demo</a></p>
+
+            <h3>Documentation</h3>
+            <p><a href="https://ar-js-org.github.io/AR.js/">AR.js</a></p>
+            <p><a href="https://carnaux.github.io/NFT-Marker-Creator/#/">Image Marker Generator</a></p>
+            <br>
+        </div>
+        <div>
+            <h3>Showcase (Scanning a Poster)</h3>
+            <p><video src="video/ARDemo.mp4" controls muted autoplay loop></video></p>
+            <!-- <p><img src="showcase/IMG_1553.jpg" alt=""></p>
+    <p><img src="showcase/IMG_1554.jpg" alt=""></p> -->
+            <p><img src="showcase/IMG_1555.jpg" alt=""></p>
+            <p><img src="showcase/IMG_1556.jpg" alt=""></p>
+        </div>
+    </main>
+
+
 </body>
+
 </html>
